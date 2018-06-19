@@ -4,9 +4,9 @@
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		stepSize ("Step size", Vector) = (1, 0, 0, 0)
-		gaus0 ("Gausian center", Float) = 0.375 // 6/16
-		gaus1 ("Gausian distance 1", Float) = 0.25 // 4/16
-		gaus2 ("Gausian distance 2", Float) = 0.0625 // 1/16
+		gaus0 ("Gaussian center", Float) = 0.375 // 6/16
+		gaus1 ("Gaussian distance 1", Float) = 0.25 // 4/16
+		gaus2 ("Gaussian distance 2", Float) = 0.0625 // 1/16
 	}
 	SubShader
 	{
