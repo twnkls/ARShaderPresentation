@@ -4,9 +4,9 @@
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		stepSize ("Step size", Vector) = (1, 0, 0, 0)
-		gaus0 ("Gaussian center", Float) = 0.375 // 6/16
-		gaus1 ("Gaussian distance 1", Float) = 0.25 // 4/16
-		gaus2 ("Gaussian distance 2", Float) = 0.0625 // 1/16
+		gauss0 ("Gaussian center", Float) = 0.375 // 6/16
+		gauss1 ("Gaussian distance 1", Float) = 0.25 // 4/16
+		gauss2 ("Gaussian distance 2", Float) = 0.0625 // 1/16
 	}
 	SubShader
 	{
@@ -55,11 +55,11 @@
 			
 			sampler2D _MainTex;
 
-			uniform float gaus0;
-			uniform float gaus1;
-			uniform float gaus2;
+			uniform float gauss0;
+			uniform float gauss1;
+			uniform float gauss2;
 
-			static float kernel[5] = {gaus2, gaus1, gaus0, gaus1, gaus2};
+			static float kernel[5] = {gauss2, gauss1, gauss0, gauss1, gauss2};
 
 			float4 frag (v2f i) : SV_Target
 			{
